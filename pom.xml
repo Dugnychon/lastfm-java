@@ -28,12 +28,12 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub OWNER Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/Dugnychon/lastm-java</url>
+			<url>https://maven.pkg.github.com/Dugnychon</url>
 		</repository>
 	</distributionManagement>
 
 	<scm>
-		<url>https://maven.pkg.github.com/Dugnychon/lastm-java</url>
+		<url>https://maven.pkg.github.com/Dugnychon</url>
 	</scm>
 
 	<developers>
