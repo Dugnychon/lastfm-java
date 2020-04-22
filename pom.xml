@@ -3,11 +3,11 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent>
+<!--	<parent>-->
+<!--		<groupId>org.sonatype.oss</groupId>-->
+<!--		<artifactId>oss-parent</artifactId>-->
+<!--		<version>7</version>-->
+<!--	</parent>-->
 
 	<groupId>de.u-mass</groupId>
 	<artifactId>lastfm-java</artifactId>
@@ -15,7 +15,7 @@
 	<packaging>jar</packaging>
 	<name>Last.fm bindings</name>
 	<description>Java bindings for the Last.fm webservice API</description>
-	<url>https://code.google.com/p/lastfm-java/</url>
+<!--	<url>https://code.google.com/p/lastfm-java/</url>-->
 
 	<licenses>
 		<license>
@@ -24,6 +24,13 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub OWNER Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/Dugnychon/lastm-java</url>
+		</repository>
+	</distributionManagement>
 
 	<scm>
 		<connection>scm:git:https://code.google.com/p/lastfm-java</connection>

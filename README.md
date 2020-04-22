@@ -9,7 +9,7 @@ It provides classes and methods to invoke Last.fm API methods as well as scrobbl
 <dependency>
     <groupId>de.u-mass</groupId>
     <artifactId>lastfm-java</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
 </dependency>
 ```
 
