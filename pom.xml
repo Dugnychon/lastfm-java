@@ -9,7 +9,7 @@
 <!--		<version>7</version>-->
 <!--	</parent>-->
 
-	<groupId>de.u-mass</groupId>
+	<groupId>dugnychon</groupId>
 	<artifactId>lastfm-java</artifactId>
 	<version>0.1.4</version>
 	<packaging>jar</packaging>

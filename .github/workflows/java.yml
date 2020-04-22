@@ -16,7 +16,8 @@ jobs:
       - name: Deploy to Github Package Registry
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          TOKENGH: ${{ secrets.TOKENGH }}
         run: |
           mkdir -p ~/.m2
-          echo "<settings><servers><server><id>github</id><username>Dugnychon</username><password>${GITHUB_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
+          echo "<settings><servers><server><id>github</id><username>Dugnychon</username><password>${TOKENGH}</password></server></servers></settings>" > ~/.m2/settings.xml
           mvn deploy -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/Dugnychon/lastfm-api
