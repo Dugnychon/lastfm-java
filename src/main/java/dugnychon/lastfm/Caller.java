@@ -24,7 +24,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package de.umass.lastfm;
+package dugnychon.lastfm;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -38,15 +38,14 @@ import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import de.umass.lastfm.Result.Status;
-import de.umass.lastfm.cache.Cache;
-import de.umass.lastfm.cache.FileSystemCache;
+import dugnychon.lastfm.cache.Cache;
+import dugnychon.lastfm.cache.FileSystemCache;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import static de.umass.util.StringUtilities.*;
+import static dugnychon.util.StringUtilities.*;
 
 /**
  * The <code>Caller</code> class handles the low-level communication between the client and last.fm.<br/>
@@ -65,7 +64,7 @@ public class Caller {
 	private static final String DEFAULT_API_ROOT = "https://ws.audioscrobbler.com/2.0/";
 	private static final Caller instance = new Caller();
 	
-	private final Logger log = Logger.getLogger("de.umass.lastfm.Caller");
+	private final Logger log = Logger.getLogger("Caller");
 	
 	private String apiRootUrl = DEFAULT_API_ROOT;
 
@@ -149,7 +148,7 @@ public class Caller {
 	 * will print debug information and error messages on failure to stdout and stderr respectively.<br/>
 	 * Default is <code>false</code>. Set this to <code>true</code> while in development and for troubleshooting.
 	 *
-	 * @see de.umass.lastfm.Caller#getLogger()
+	 * @see Caller#getLogger()
 	 * @param debugMode <code>true</code> to enable debug mode   
 	 * @deprecated Use the Logger instead
 	 */
@@ -159,7 +158,7 @@ public class Caller {
 	}
 
 	/**
-	 * @see de.umass.lastfm.Caller#getLogger()
+	 * @see Caller#getLogger()
 	 * @return the debugMode property
 	 * @deprecated Use the Logger instead
 	 */
@@ -324,8 +323,8 @@ public class Caller {
 		Document document = newDocumentBuilder().parse(new InputSource(new InputStreamReader(inputStream, "UTF-8")));
 		Element root = document.getDocumentElement(); // lfm element
 		String statusString = root.getAttribute("status");
-		Status status = "ok".equals(statusString) ? Status.OK : Status.FAILED;
-		if (status == Status.FAILED) {
+		Result.Status status = "ok".equals(statusString) ? Result.Status.OK : Result.Status.FAILED;
+		if (status == Result.Status.FAILED) {
 			Element errorElement = (Element) root.getElementsByTagName("error").item(0);
 			int errorCode = Integer.parseInt(errorElement.getAttribute("code"));
 			String message = errorElement.getTextContent();

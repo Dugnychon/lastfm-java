@@ -24,13 +24,13 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package de.umass.lastfm.cache;
+package dugnychon.lastfm.cache;
 
 import java.io.IOException;
 import java.util.Collection;
 
-import de.umass.lastfm.scrobble.Scrobbler;
-import de.umass.lastfm.scrobble.SubmissionData;
+import dugnychon.lastfm.scrobble.Scrobbler;
+import dugnychon.lastfm.scrobble.SubmissionData;
 
 /**
  * A <code>ScrobbleCache</code> is able to cache {@link SubmissionData} instances for later submission
@@ -44,7 +44,7 @@ import de.umass.lastfm.scrobble.SubmissionData;
 public interface ScrobbleCache {
 
 	/**
-	 * Caches one or more {@link de.umass.lastfm.scrobble.SubmissionData}.
+	 * Caches one or more {@link SubmissionData}.
 	 *
 	 * @param submissions The submissions
 	 */

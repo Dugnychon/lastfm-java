@@ -24,7 +24,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package de.umass.lastfm.cache;
+package dugnychon.lastfm.cache;
 
 import java.util.Map;
 

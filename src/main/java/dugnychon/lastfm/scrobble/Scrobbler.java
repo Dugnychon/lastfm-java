@@ -24,7 +24,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package de.umass.lastfm.scrobble;
+package dugnychon.lastfm.scrobble;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -34,15 +34,16 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
-import java.net.Proxy;
 import java.util.Collection;
 import java.util.Collections;
 
-import de.umass.lastfm.Caller;
-import de.umass.lastfm.Session;
+import dugnychon.lastfm.Authenticator;
+import dugnychon.lastfm.Caller;
+import dugnychon.lastfm.Session;
+import dugnychon.lastfm.Track;
 
-import static de.umass.util.StringUtilities.encode;
-import static de.umass.util.StringUtilities.md5;
+import static dugnychon.util.StringUtilities.encode;
+import static dugnychon.util.StringUtilities.md5;
 
 /**
  * This class manages communication with the server for scrobbling songs. You can retrieve an instance of this class by calling
@@ -57,9 +58,9 @@ import static de.umass.util.StringUtilities.md5;
  * <code>Scrobbler</code> to use a Proxy server, set it with {@link Caller#setProxy(java.net.Proxy)}.
  *
  * @author Janni Kovacs
- * @see de.umass.lastfm.Track#scrobble(ScrobbleData, de.umass.lastfm.Session)
- * @see de.umass.lastfm.Track#scrobble(String, String, int, de.umass.lastfm.Session)
- * @see de.umass.lastfm.Track#scrobble(java.util.List, de.umass.lastfm.Session)
+ * @see Track#scrobble(ScrobbleData, Session)
+ * @see Track#scrobble(String, String, int, Session)
+ * @see Track#scrobble(java.util.List, Session)
  * @deprecated The 1.2.x scrobble protocol has now been deprecated in favour of the 2.0 protocol which is part of the Last.fm web services
  *             API.
  */
@@ -124,7 +125,7 @@ public class Scrobbler {
 	 * @param session An authenticated Session.
 	 * @return the status of the operation
 	 * @throws IOException on I/O errors
-	 * @see de.umass.lastfm.Authenticator
+	 * @see Authenticator
 	 */
 	public ResponseStatus handshake(Session session) throws IOException {
 		long time = System.currentTimeMillis() / 1000;

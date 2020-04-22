@@ -24,7 +24,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package de.umass.lastfm.cache;
+package dugnychon.lastfm.cache;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -32,16 +32,17 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
 
-import de.umass.lastfm.Session;
-import de.umass.lastfm.Track;
-import de.umass.lastfm.scrobble.ScrobbleData;
-import de.umass.lastfm.scrobble.ScrobbleResult;
-import de.umass.lastfm.scrobble.Scrobbler;
-import de.umass.lastfm.scrobble.SubmissionData;
-import de.umass.util.StringUtilities;
+import dugnychon.lastfm.Session;
+import dugnychon.lastfm.Track;
+import dugnychon.lastfm.scrobble.ScrobbleData;
+import dugnychon.lastfm.scrobble.ScrobbleResult;
+import dugnychon.lastfm.scrobble.Scrobbler;
+import dugnychon.lastfm.scrobble.SubmissionData;
+import dugnychon.util.StringUtilities;
+import dugnychon.lastfm.Caller;
 
 /**
- * Standard {@link Cache} implementation which is used by default by the {@link de.umass.lastfm.Caller} class.
+ * Standard {@link Cache} implementation which is used by default by the {@link Caller} class.
  * This implementation caches all responses in the file system. In addition to the raw responses it stores a
  * .meta file which contains the expiration date for the specified request.
  *

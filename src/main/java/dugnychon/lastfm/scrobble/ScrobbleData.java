@@ -24,7 +24,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package de.umass.lastfm.scrobble;
+package dugnychon.lastfm.scrobble;
 
 /**
  * Class that holds all available fields for scrobble (and now playing) requests.

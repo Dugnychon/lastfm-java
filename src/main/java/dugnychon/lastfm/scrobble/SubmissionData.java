@@ -24,17 +24,20 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package de.umass.lastfm.scrobble;
+package dugnychon.lastfm.scrobble;
 
-import static de.umass.util.StringUtilities.decode;
-import static de.umass.util.StringUtilities.encode;
+import dugnychon.lastfm.Session;
+import dugnychon.lastfm.Track;
+
+import static dugnychon.util.StringUtilities.decode;
+import static dugnychon.util.StringUtilities.encode;
 
 /**
  * Bean that contains track information.
  *
  * @author Janni Kovacs
- * @see de.umass.lastfm.scrobble.ScrobbleData
- * @see de.umass.lastfm.Track#scrobble(ScrobbleData, de.umass.lastfm.Session)
+ * @see ScrobbleData
+ * @see Track#scrobble(ScrobbleData, Session)
  * @deprecated The 1.2.x scrobble protocol has now been deprecated in favour of the 2.0 protocol which is part of the Last.fm web services
  *             API.
  */

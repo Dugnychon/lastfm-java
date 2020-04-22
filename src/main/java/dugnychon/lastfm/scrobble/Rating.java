@@ -24,7 +24,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package de.umass.lastfm.scrobble;
+package dugnychon.lastfm.scrobble;
 
 /**
  * The rating of the track. See <a href="https://www.last.fm/api/submissions#subs">https://www.last.fm/api/submissions#subs</a>

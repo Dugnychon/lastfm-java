@@ -24,22 +24,23 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package de.umass.lastfm.cache;
+package dugnychon.lastfm.cache;
 
 import java.io.InputStream;
 import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-import de.umass.util.StringUtilities;
+import dugnychon.util.StringUtilities;
+import dugnychon.lastfm.Caller;
 
 /**
  * The <code>Cache</code> handles storing and loading to a permanent storage for last.fm api requests. This could be
  * a file system or a sql database.
  *
  * @author Janni Kovacs
- * @see de.umass.lastfm.Caller#setCache(Cache)
- * @see de.umass.lastfm.cache.ExpirationPolicy
+ * @see Caller#setCache(Cache)
+ * @see ExpirationPolicy
  */
 public abstract class Cache {
 
@@ -52,7 +53,7 @@ public abstract class Cache {
 	}
 
 	/**
-	 * Returns the active {@link de.umass.lastfm.cache.ExpirationPolicy}
+	 * Returns the active {@link ExpirationPolicy}
 	 *
 	 * @return the ExpirationPolicy
 	 */
@@ -61,7 +62,7 @@ public abstract class Cache {
 	}
 
 	/**
-	 * Sets the active {@link de.umass.lastfm.cache.ExpirationPolicy}.
+	 * Sets the active {@link ExpirationPolicy}.
 	 *
 	 * @param expirationPolicy An ExpirationPolicy, not <code>null</code>
 	 */

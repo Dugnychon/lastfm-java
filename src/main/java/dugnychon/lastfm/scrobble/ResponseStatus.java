@@ -24,14 +24,17 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package de.umass.lastfm.scrobble;
+package dugnychon.lastfm.scrobble;
+
+import dugnychon.lastfm.Session;
+import dugnychon.lastfm.Track;
 
 /**
  * Contains information about the result of a scrobbling operation and an optional error message.
  *
  * @author Janni Kovacs
- * @see de.umass.lastfm.scrobble.ScrobbleResult
- * @see de.umass.lastfm.Track#scrobble(ScrobbleData, de.umass.lastfm.Session)
+ * @see ScrobbleResult
+ * @see Track#scrobble(ScrobbleData, Session)
  * @deprecated The 1.2.x scrobble protocol has now been deprecated in favour of the 2.0 protocol which is part of the Last.fm web services
  *             API.
  */

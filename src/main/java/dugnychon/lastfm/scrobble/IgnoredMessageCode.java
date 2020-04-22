@@ -23,7 +23,7 @@
  * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package de.umass.lastfm.scrobble;
+package dugnychon.lastfm.scrobble;
 
 import java.util.HashMap;
 import java.util.Map;
