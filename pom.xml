@@ -15,7 +15,7 @@
 	<packaging>jar</packaging>
 	<name>Last.fm bindings</name>
 	<description>Java bindings for the Last.fm webservice API</description>
-	<url>http://code.google.com/p/lastfm-java/</url>
+	<url>https://code.google.com/p/lastfm-java/</url>
 
 	<licenses>
 		<license>
